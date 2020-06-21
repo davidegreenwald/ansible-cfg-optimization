@@ -4,7 +4,7 @@ A handful of settings I like to add to each project's `ansible.cfg` INI file for
 
 ## Performance
 
-### pipelining
+### Pipelining
 
 This allows batching of SSH requests and less connection time—a significant performance gain. `requiretty` must be disabled in the target host's `/etc/sudoers` file for this to work, but this should be the default in CentOS 7 and many other distributions and shouldn't cause problems. Test and see.
 
@@ -53,7 +53,7 @@ This was previously activated by setting the `stdout_callback` to `actionable`:
 stdout_callback = actionable
 ```
 
-But this will be deprecated in Ansible 2.11, as the default stdout plugin can do it with these settings, which work in current Ansible version (tested by me on 2.9+):
+But this will be deprecated in Ansible 2.11, as the default stdout plugin can do it with these settings, which work in the current Ansible version (tested by me on 2.9+):
 
 ```
 [defaults]
@@ -116,8 +116,7 @@ ssh_args = -F .ssh/config
 
 ## More Resources
 
-A helpful set of [official Ansible examples](https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg) and defaults to be aware of
-
-List of [Ansible configuration options](https://docs.ansible.com/ansible/latest/reference_appendices/config.html) and environment variables from the Ansible documentation
+- A helpful set of [official Ansible examples](https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg) and defaults to be aware of
+- List of [Ansible configuration options](https://docs.ansible.com/ansible/latest/reference_appendices/config.html) and environment variables from the Ansible documentation
 
 
